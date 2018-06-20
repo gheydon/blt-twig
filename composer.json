@@ -1,0 +1,23 @@
+{
+    "name": "heydon/blt-twig",
+    "description": "Expands on robo-twig to add additional support for blt",
+    "type": "robo-tasks",
+    "require": {
+        "heydon/robo-twig": "dev-master",
+        "acquia/blt": "^9.0"
+    },
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Gordon Heydon",
+            "email": "gordon@heydon.com.au"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Heydon\\Blt\\": "src"
+        }
+    }
+}
