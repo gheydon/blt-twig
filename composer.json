@@ -4,7 +4,8 @@
     "type": "robo-tasks",
     "require": {
         "heydon/robo-twig": "dev-master",
-        "acquia/blt": "^9.0"
+        "acquia/blt": "^9.0",
+        "jasny/twig-extensions": "^1.2"
     },
     "license": "GPL-2.0-or-later",
     "authors": [
