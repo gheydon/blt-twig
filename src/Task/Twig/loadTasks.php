@@ -2,6 +2,7 @@
 
 namespace Heydon\Blt\Task\Twig;
 
+use Acquia\Blt\Robo\BltTasks;
 use Heydon\Blt\Task\Twig;
 
 trait loadTasks {
@@ -11,7 +12,7 @@ trait loadTasks {
    *
    * @return Twig
    */
-  protected function taskTwig() {
-    return $this->task(Twig::class);
+  protected function taskTwig(BltTasks $task) {
+    return $this->task(Twig::class, $task);
   }
 }
