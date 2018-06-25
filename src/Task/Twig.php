@@ -10,6 +10,7 @@ use Jasny\Twig\PcreExtension;
 class Twig extends TaskTwig {
 
   public function __construct(BltTasks $task) {
+    $this->context['task'] = $task;
     $this->extensions = [
       new Extension($task),
       new PcreExtension(),

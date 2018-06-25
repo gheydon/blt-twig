@@ -2,26 +2,15 @@
 
 namespace Heydon\Blt\Twig;
 
-use Acquia\Blt\Robo\BltTasks;
-
 class Extension extends \Twig_Extension {
 
   /**
-   * @var \Acquia\Blt\Robo\BltTasks $task.
+   * {@inheritdoc}
    */
-  protected $task;
-
-  public function __construct(BltTasks $task) {
-    $this->task = $task;
-  }
-
-  public function getFunctions() {
+  public function getNodeVisitors() {
     return [
-      new \Twig_SimpleFunction('config', [$this, 'getConfig']),
+      new NodeVisitor(),
     ];
   }
 
-  public function getConfig($key) {
-    return $this->task->getConfig()->get($key);
-  }
 }
