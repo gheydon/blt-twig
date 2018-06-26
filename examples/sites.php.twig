@@ -1,0 +1,17 @@
+<?php
+
+// @codingStandardsIgnoreFile
+
+{# Warning for generated files. #}
+/**
+ * Do not edit! See {{ config.repo.root }}/blt/Templates/sites.php.twig
+ */
+
+$sites = [];
+{% if config.drupal.profiles %}
+  {% for id,profile in config.drupal.profiles %}
+    {% for hostname in profile.hostnames %}
+$sites['{{ hostname }}'] = '{{ id }}';
+    {% endfor %}
+  {% endfor %}
+{% endif %}
